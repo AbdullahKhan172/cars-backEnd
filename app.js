@@ -5,6 +5,8 @@ const userRouter = require("./routes/userRoutes");
 const globalErrorHandler = require("./controllers/errorController");
 
 app.use(express.json());
+var cors = require("cors");
+app.use(cors());
 app.use((req, res, next) => {
   console.log("Hello from the middle ware broooo!!!!");
   next();
